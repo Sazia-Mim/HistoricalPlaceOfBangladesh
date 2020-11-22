@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Historical Places of Bangladesh</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Visit-site</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#showcase">Home</a></li>
+                      <!-- <li><a href="#info1">About</a></li> -->
+                      <li><a href="#footter">Contact</a></li>
+                      <!-- <li><a href="#info1">Places</a> </li> -->
+                    
+                    
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  Places
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							  <a class="dropdown-item" href="#info1"><h5>Ahsan Manzil</h5></a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#info2"><h5>Lalbag Fort</h5></a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#info3"><h5>Salbon Bihar</h5></a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#info4"><h5>Kuthibari</h5></a>
+							  <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#info5"><h5>Saat Gombuz</h5></a>
+                              <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#info6"><h5>Sonarganon</h5></a>
+							 
+							</div>
+						  </li>
+
+                    
+                    
+                    
+                    
+                   
+                      <li><a href="#footter">Sign Up</a></li>
+                      <li><a href="p2.html">Help</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <section id="showcase">
+          <div class="container">
+              <div class="row">
+                  
+                      <div class="showcase-left">
+                          <img src="https://besttoppers.com/wp-content/uploads/2020/07/top-10-histoical-places-of-the-world.jpg">
+                      </div>
+        
+                 
+              </div>
+          </div>
+      </section>
+
+      <section id="testimonial">
+          <div class="container">
+              <p>Top 5 Historical Places of Bangladesh</p>
+              
+          </div>
+      </section>
+
+      <section id="info1">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                      <div class="info-left">
+                          <img src="./img/Ahsan_Manzil-Front_View.jpg">
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                      <div class="info-right">
+                          <h2>Ahsan Manzil</h2>
+                          <br>
+                        <p>Ahsan Manzil situated at Kumartoli of Dhaka on the bank of the Buriganga, was the residential palace and the kachari of the nawabs of dhaka. It has been turned into a museum recently. It was said to be the Rang Mahal of Sheikh Enayetullah, a zamindar of Jamalpur pargana (Barisal) during the time of the Mughals. Having purchased it from his son Matiullah, the french made it their trading centre. Khwaja alimullah bought it from the French in 1830 and converted it into his residence, effecting necessary reconstruction and renovations. Nawab Khwaja abdul ghani engaged Martin and Company, a European construction and engineering firm, to make a master plan for their residence.</p>
+                          <br>
+                          <a class="btn btn-default btn-sm" href="AhsanManzil.html">Read More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+      <section id="info1">
+          <div id="info2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <h2>Lalbag Fort</h2>
+                        <br>
+                      <p>Lalbagh Fort or Fort Aurangabad, an incomplete Mughal palace fortress at Dhaka on the river Buriganga in the southwestern part of the old city. The river has now gone further south and flows at quite a distance from the fort. D'Oily's painting (1809-11) shows that more than half of this east-west oblong fortress touched the water of the river on its south and southwestern sides.</p>
+                        <br>
+                        <a class="btn btn-default btn-sm" href="lalbagFort.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-right">
+                        
+                        <img src="./img/lalbagfort.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="info1">
+        <div id="info3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <img src="./img/salbonbihar.jpg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-right">
+                        <h2>Salbon Bihar</h2>
+                        <br>
+                      <p>Shalban Bihar is an archaeological site in Moinamoti, Comilla, Bangladesh. The ruins are in the middle of the Lalmai hills ridge, and these are of a 7th-century Paharpur-style Buddhist Bihar with 115 cells for monks. It operated through the 12th century.[2][3]
+
+                        Excavations have revealed many archaeological artifacts dated to between the 7th and 12th centuries.Most of them are kept in the Moinamoti Museum now.[4]</p>
+                        <br>
+                        <a class="btn btn-default btn-sm" href="salbonbihar.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    
+
+    
+    <section id="info1">
+        <div id="info4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <h2>Rabindranath Tagore's Shilaidaha Kuthibari</h2>
+                        <br>
+                      <p>If you’re a lover of poetry and music, it’s worth stopping by Rabindranath Tagore’s Shilaidaha Kuthibari. Tagore is a treasured writer who won the Nobel Prize in Literature — the first non-European to do so. Tagore stayed at Shilaidaha Kuthibari, a country house, writing during his stay here. Today, this three-storey building is a national monument and popular tourist attraction in Bangladesh. The home now serves as a museum where visitors can view Tagore’s belongings. It sits on beautiful grounds, with lush green grass and a pond.</p>
+                        <br>
+                        <a class="btn btn-default btn-sm" href="kuthibari.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-right">
+                        
+                        <img src="./img/Tagore_Kuthibari.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section id="info1">
+        <div id="info5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <img src="./img/shaat gambuz mosque.jpg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-right">
+                        <h2>Saat Gombuj Jame Masjid</h2>
+                        <br>
+                      <p>Originally, the historic Mosque City was khown as 'khalifatabad'. It as situated at the outskirts of bagerhat town--- not very far from the dens mangrove forest of the sundarbans.Khalifatabad was Muslim colony. It was founded by the Turkish genarel, a saint warrior Ulugh Khan Jahan in the 15th century. The infrastructure of the city reveals significant technical skills in many mosques as well as early Islamik monuments. Baked bricks were used for the counstruction of the buildings. The planning of the city was distinctly dominated by Islamic architecture and the decorations were a combination of Mughal and Turkish architecture.
+
+                    </p>
+                        <br>
+                        <a class="btn btn-default btn-sm" href="saatgombujj.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section id="info1">
+        <div id="info6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-left">
+                        <h2>Sonargaon</h2>
+                        <br>
+                      <p>Sonargaon is one of the old capitals of the historic region of Bengal and was an administrative center of eastern Bengal. It was also a river port. Its hinterland was the center of the muslin trade in Bengal, with a large population of weavers and artisans. According to ancient Greek and Roman accounts, an emporium was located in this hinterland, which archaeologists have identified with the Wari-Bateshwar ruins. The area was a base for the Vanga, Samatata, Sena, and Deva dynasties.</p>
+                        <br>
+                        <a class="btn btn-default btn-sm" href="sonargaon.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-right">
+                        
+                        <img src="./img/sonargaon.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+      <hr>
+      
+
+     
+
+      <footer id="footter" style="background-color:black">
+        <h1><span style="color :white">BD</span></h1>
+        <P ><span style="color :white">Historical Places</span></P>        
+    
+        <h3><span style="color :white"><b>Contact Us</b></span></h3>
+
+        <small><span style="color :white">Director Administration</span></small>
+        <br>
+        <small><span style="color :white"> +88-02-9013166,</span></small><br>
+        <img src="data:image/png;base64,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" height="10px"width="10px">
+        <small> <span style="color :white">+88-02-9010049 Ext: 3820</span></small>
+        <br>
+        <img src="data:image/png;base64,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" height="10px"width="10px">
+        <small><span style="color :white"> +880 176 902 3820</span></small>
+        <br>
+        <img src="https://w7.pngwing.com/pngs/243/358/png-transparent-black-and-white-e-mail-logo-email-computer-icons-icon-design-email-miscellaneous-angle-triangle.png" height="10px" width="10px">
+        <small><span style="color :white">dir@admin.visit.ac.bd</span></small>
+        
+    </footer>
+
+     
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+window.scroll(function () {
+  if (window.scrollTop() >= 50) {
+      '.navbar'.css('background', 'red');
+  } else {
+      '.navbar'.css('background', 'transparent');
+  }
+});
+</script>
+
+<script>
+window.sr = ScrollReveal();
+sr.reveal('.navbar', {
+  duration: 2000,
+  origin: 'bottom',
+  reset: 'true'
+});
+sr.reveal('.showcase-left', {
+  duration: 2000,
+  origin: 'top',
+  distance: '300px',
+  reset: 'true'
+});
+sr.reveal('.showcase-right', {
+  duration: 2000,
+  origin: 'right',
+  distance: '300px'
+});
+sr.reveal('.showcase-btn', {
+  duration: 2000,
+  delay: 2000,
+  origin: 'bottom'
+});
+sr.reveal('#testimonial div', {
+  duration: 2000,
+  origin: 'bottom'
+});
+sr.reveal('.info-left', {
+  duration: 2000,
+  origin: 'left',
+  distance: '300px',
+  viewFactor: 0.2
+});
+sr.reveal('.info-right', {
+  duration: 2000,
+  origin: 'right',
+  distance: '300px',
+  viewFactor: 0.2
+});
+</script>
+
+<script>
+$(function () {
+  // Smooth Scrolling
+  $('a[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 1000);
+              return false;
+          }
+      }
+  });
+});
+</script>
+
+
+</html>

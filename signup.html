@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script scr="form.js"></script>
+</head>
+<body>
+    <h1>Form</h1>
+    <div id="formContainer">
+        <div id="header"></div>
+        <input type="email" placeholder="email" id="email"/>
+        <input type="password" placeholder="password" id="password" />
+        <button onclick="signUp()" id ="signUp">signUp</button>
+        <button onclick="signIn()" id="signIn">signIn</button>
+        <button onclick="signOut()" id="signOut">signOut</button>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD5pQMEnA5VP3NzaCwtH3fATT048Nz-f1k",
+            authDomain: "comment-ece46.firebaseapp.com",
+            databaseURL: "https://comment-ece46.firebaseio.com",
+            projectId: "comment-ece46",
+            storageBucket: "comment-ece46.appspot.com",
+            messagingSenderId: "535649967045",
+            appId: "1:535649967045:web:9be365f85bc91099e709ac"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+            const auth = firebase.auth();
+
+
+            function signUp() {
+
+                var email = document.getElementById("email");
+                var password = document.getElementById("password");
+
+                const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+                promise.catch(e => alert(e.message));
+
+                alert("Signed Up");
+            }
+
+            	function signIn(){
+
+		    var email = document.getElementById("email");
+		    var password = document.getElementById("password");
+
+		    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+		    promise.catch(e => alert(e.message));
+
+
+
+
+	    }
+
+
+	function signOut(){
+
+		auth.signOut();
+		alert("Signed Out");
+
+	}
+
+
+
+	auth.onAuthStateChanged(function(user){
+
+		if(user){
+
+			var email = user.email;
+			alert("Active User " + email);
+
+			//Take user to a different or home page
+
+			//is signed in
+
+		}else{
+
+			alert("No Active User");
+			//no user is signed in
+		}
+
+
+
+	});
+            
+
+    </script>
+</body>
+</html>
