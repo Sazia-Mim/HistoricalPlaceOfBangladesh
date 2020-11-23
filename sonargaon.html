@@ -429,59 +429,106 @@
 </div>
 
 
-      <br>
-  <div class="comment">
-      <h3>Post A Comment!</h3>
-      <hr>
-      <form action="process.php" method="POST">
-          <div>
-              <label>Name</label>
-              <input type="text" name = "firstName" placeholder="Enter Your Name">
-          </div>
-          <br>
-          <div>
-                  <label>Email</label>
-                  <input type="email" name = "Email" placeholder="Enter Your Email">
-          </div>
-  
-          <br>
-  
-          <div>
-                  <label>Age</label>
-                  <input type="number" name = "Age" placeholder="Enter Your age">
-          </div>
-  
-          <br>
-  
-          <div>
-                  <label>Date</label>
-                  <input type="date" name = "Date">
-          </div>
-  
-          <br>
-          <div>
-                  <label>User Type</label>
-                  <select>
-                      <option value="Guest">Guest</option>
-                      <option value="Registered">Registered</option>
-                  </select>
-          </div>
-  
-          
-          <br>
-          <div>
-                  <label>Comment</label>
-                  <textarea name="comment" placeholder="Your Comment"></textarea>
-          </div>
-  
-          <br>
-          <input type="submit" name="submit" value="Post Your Comment!">
-         
-  
-  
+<br>
+<div class="comment">
+	<h3>Post A Comment!</h3>
+	<div id="allcomments">
+	  <h3>Comments</h3>
+	  <!-- We will show past comments in the list below-->
+	  <ul id="pastcomments"></ul>
+	  <!-- This is the form for entering a new comment -->
+	  <form id="newcomment">
+		  <label for="tbName">First Name or Initials</label>
+		  <br>
+		  <input id="tbName" type="text" maxlength="20" required>
+		  <br>
+		  <label for="txComment">Your Comment / Question</label>
+		  <br>
+		  <textarea id="txComment" maxlength="4096" required style="width:96%"></textarea>
+		  <br>
+		  <input type="submit" id="btnSubmitComment" value="Submit Comment">
 	  </form>
-	  </div>
-  
+  </div>
+  <!-- Connection to Firebase -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+  <script>
+	  // Initialize Firebase - be sure to use your own code, this connects to my database.
+	  // Initialize Firebase
+	  var config = {
+		  apiKey: "AIzaSyBqKX1_Jmhm809kqW3SBifAjmVfzLfC-0w",
+		  authDomain: "comments2-a5f2e.firebaseapp.com",
+		  databaseURL: "https://comments2-a5f2e.firebaseio.com",
+		  projectId: "comments2-a5f2e",
+		  storageBucket: "comments2-a5f2e.appspot.com",
+		  messagingSenderId: "617710094361"
+	  };
+	  firebase.initializeApp(config); -->
+
+
+
+		 <script  src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+		 <script  src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyAcCw6IV_LBWgrgTGFym0-E7DyU4sDqadk",
+  authDomain: "comment-demo-2839b.firebaseapp.com",
+  databaseURL: "https://comment-demo-2839b.firebaseio.com",
+  projectId: "comment-demo-2839b",
+  storageBucket: "comment-demo-2839b.appspot.com",
+  messagingSenderId: "168514520579",
+  appId: "1:168514520579:web:1676a30b91847ea9d67036"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+
+	  //Rootref is the whole database.
+	  const rootRef = firebase.database().ref();
+	  //commentsRef is just the pageCountsNode
+	  const commentsRef = rootRef.child('comments');
+	  //Listen for click on Submit Comment button, and post comment.
+	  document.getElementById("btnSubmitComment").addEventListener("click", function () {
+		  //Replace line breaks in comment with br tags.
+		  var newcomment = document.getElementById('txComment').value.replace(/\n/g, "<br>");
+		  //Define a new, keyed post.
+		  var newPostRef = commentsRef.push();
+		  //Fill tne new keyed post with data
+		  newPostRef.set({
+			  name: document.getElementById('tbName').value.trim(),
+			  comment: newcomment.trim(),
+			  frompage: location.pathname,
+			  when: firebase.database.ServerValue.TIMESTAMP
+		  });
+	  });
+
+	  function showpastcomments() {
+		  var showat = document.getElementById('pastcomments');
+		  //Get comments whose from page equals this page's pathname.
+		  var commentsRef = firebase.database().ref('comments/').orderByChild('frompage').equalTo(location.pathname);
+		  commentsRef.once('value', function (snapshot) {
+			  snapshot.forEach(function (itemSnapshot) {
+				  //Get the object for one snapshot
+				  var itemData = itemSnapshot.val();
+				  var comment = itemData.comment;
+				  var name = itemData.name;
+				  var when = new Date(itemData.when).toLocaleDateString("en-us");
+				  showat.innerHTML += "<li>" + comment + "<span> -- " + name + " (" + when +
+					  ")</span></li>";
+			  })
+		  })
+	  }
+	  //Called when page first opens and also after Submit button click to show all comments for this page.
+	  showpastcomments()
+  </script>
+
+
+
 
 
       <hr>
