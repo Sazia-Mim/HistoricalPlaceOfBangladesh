@@ -24,26 +24,86 @@
             <div class="w3-padding-64 w3-padding-large">
               <h1>Contact</h1>
               <p class="w3-opacity">GET IN TOUCH</p>
-              <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+              <form class="w3-container w3-card w3-padding-32 w3-white" id="contactForm">
                 <div class="w3-section">
-                  <label>Name</label>
-                  <input class="w3-input" style="width:100%;" type="text" required name="Name">
+                  <label >Name</label>
+                  <input id="name" class="w3-input" style="width:100%;" type="text" required name="Name">
                 </div>
                 <div class="w3-section">
-                  <label>Email</label>
-                  <input class="w3-input" style="width:100%;" type="text" required name="Email">
+                  <label >Email</label>
+                  <input id="email" class="w3-input" style="width:100%;" type="text" required name="Email">
                 </div>
                 <div class="w3-section">
-                  <label>Message</label>
-                  <input class="w3-input" style="width:100%;" type="text" required name="Message">
+                  <label >Message</label>
+                  <input id="message" class="w3-input" style="width:100%;" type="text" required name="Message">
                 </div>
-                <button type="submit" class="w3-button w3-teal w3-right">Send</button>
+                <button type="submit" class="w3-button w3-teal w3-right"   id="btn">Send</button>
               </form>
             </div>
           </div>
         
-        
-     
+
+
+
+
+          <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+                            
+          <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+          <!--    
+                      <script defer src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script> --> -->
+          
+          
+          <!-- TODO: Add SDKs for Firebase products that you want to use
+                       https://firebase.google.com/docs/web/setup#available-libraries -->
+          
+          <script>
+              // Your web app's Firebase configuration
+              // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAcCw6IV_LBWgrgTGFym0-E7DyU4sDqadk",
+    authDomain: "comment-demo-2839b.firebaseapp.com",
+    databaseURL: "https://comment-demo-2839b.firebaseio.com",
+    projectId: "comment-demo-2839b",
+    storageBucket: "comment-demo-2839b.appspot.com",
+    messagingSenderId: "168514520579",
+    appId: "1:168514520579:web:1676a30b91847ea9d67036"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+              
+              const userName = document.getElementById("name");
+                  const userEmail = document.getElementById("email");
+                  const userMessage = document.getElementById("message");
+                //   const subject= document.getElementById("subject")
+
+                  const submitBtn = document.getElementById("btn");
+
+                  const database = firebase.database();
+
+                  submitBtn.addEventListener('click', (e) => {
+                      console.log(userEmail);
+                      e.preventDefault();
+                      database.ref('/users/' + userName.value).set({
+
+                          user_Email: userEmail.value,
+                          
+                        //   user_subject:subject.value,
+
+                          user_Message: userMessage.value,
+
+                          
+                          
+                      });
+                      // document.catch(e => alert(e.Message));
+
+                      // alert("Message sent");
+                      document.getElementById("contactForm").reset();
+                      
+
+                  });
+          </script>
     
   </div>
 </div>
